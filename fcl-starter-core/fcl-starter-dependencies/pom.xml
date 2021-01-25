@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.2</version>
+        <relativePath/>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fuchangling</groupId>
+    <artifactId>fcl-cloud-dependencies</artifactId>
+    <version>1.0-SNAPHOST</version>
+    <name>fcl-starter-dependencies</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <spring.boot.version>2.4.2</spring.boot.version>
+        <spring.cloud.version>2020.0.0</spring.cloud.version>
+        <alibaba.cloud.version>2.2.1.RELEASE</alibaba.cloud.version>
+        <fcl.starter.core.version>1.0-SNAPSHOT</fcl.starter.core.version>
+
+        <mysql.connector.version>8.0.21</mysql.connector.version>
+        <postgresql.connector.version>42.2.18</postgresql.connector.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- fcl-Cloud Version -->
+            <dependency>
+                <groupId>com.fuchangling</groupId>
+                <artifactId>fcl-starter-common</artifactId>
+                <version>${fcl.starter.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fuchangling</groupId>
+                <artifactId>fcl-starter-web</artifactId>
+                <version>${fcl.starter.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fuchangling</groupId>
+                <artifactId>fcl-starter-core</artifactId>
+                <version>${fcl.starter.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fuchangling</groupId>
+                <artifactId>fcl-starter-security</artifactId>
+                <version>${fcl.starter.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fuchangling</groupId>
+                <artifactId>fcl-starter-file</artifactId>
+                <version>${fcl.starter.core.version}</version>
+            </dependency>
+            <!-- Mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+            <!-- PostgreSql -->
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.connector.version}</version>
+            </dependency>
+            <!-- Spring Cloud Version -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
